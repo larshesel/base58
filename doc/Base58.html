@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Base58</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="css/elixir.css" type="text/css" media="screen" charset="utf-8" />
+    <script type="text/javascript" charset="utf-8">
+      relpath = '';
+      if (relpath != '') relpath += '/';
+    </script>
+
+    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+
+    <section id="content">
+      <div class="breadcrumbs">Base58Check v0.0.1 &rarr; <a href="overview.html">Overview</a> &rarr; <a href="Base58.html">Base58</a></div>
+      <h1>
+        Base58
+        
+      </h1>
+
+      <ul class="summary_links">
+        
+          <li><a href="#summary">Summary</a></li>
+        
+        
+        
+          <li><a href="#functions_details">Functions</a></li>
+        
+        
+        
+      </ul>
+
+      
+        <section id="moduledoc" class="docstring">
+          <p>Base58 implements the bitcoin Base58Check as well as raw base58
+encoding and decoding functionalities.</p>
+
+        </section>
+      
+
+      
+        <a href="https://github.com/larshesel/base58/blob/master/lib/base58.ex#L1" class="view_source">Source</a>
+      
+
+      
+        <h2 id="summary">Summary<span class="detail_header_links"><a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a></span></h2>
+        <table class="summary">
+          <tr>
+  <td class="summary_signature"><a href="#check_decode/1">check_decode(data)</a></td>
+  
+    <td class="summary_synopsis"><p>check_decode implements Base58Check decoding</p>
+</td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#check_encode/2">check_encode(version, payload)</a></td>
+  
+    <td class="summary_synopsis"><p>check_encode implements the Base58Check encoding</p>
+</td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#decode/1">decode(encoded)</a></td>
+  
+    <td class="summary_synopsis"><p>decode implements Base58 decoding</p>
+</td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#encode/1">encode(decoded)</a></td>
+  
+    <td class="summary_synopsis"><p>encode implements Base58 encoding</p>
+</td>
+  
+</tr>
+<tr>
+  <td class="summary_signature"><a href="#padding/2">padding(len, byte)</a></td>
+  
+</tr>
+
+        </table>
+      
+
+      
+
+      
+        <section id="functions_details" class="details_list">
+          <h2>Functions</h2>
+          <section class="detail">
+  <div class="detail_header" id="check_decode/1">
+    <span class="signature"><strong>check_decode(data)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#check_decode/1" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+    <p>Specs:</p>
+    <ul class="spec">
+      
+        <li>check_decode(binary) :: {integer, binary} | {:error, :invalid_checksum}</li>
+      
+    </ul>
+  
+  <section class="docstring">
+    <p>check_decode implements Base58Check decoding.</p>
+
+  </section>
+  
+    <a href="https://github.com/larshesel/base58/blob/master/lib/base58.ex#L28" class="view_source">Source</a>
+  
+</section>
+<section class="detail">
+  <div class="detail_header" id="check_encode/2">
+    <span class="signature"><strong>check_encode(version, payload)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#check_encode/2" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+    <p>Specs:</p>
+    <ul class="spec">
+      
+        <li>check_encode(integer, binary) :: binary</li>
+      
+    </ul>
+  
+  <section class="docstring">
+    <p>check_encode implements the Base58Check encoding.</p>
+<p>Note version can only be in the interval [0,255].</p>
+
+  </section>
+  
+    <a href="https://github.com/larshesel/base58/blob/master/lib/base58.ex#L18" class="view_source">Source</a>
+  
+</section>
+<section class="detail">
+  <div class="detail_header" id="decode/1">
+    <span class="signature"><strong>decode(encoded)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#decode/1" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+    <p>Specs:</p>
+    <ul class="spec">
+      
+        <li>decode(binary) :: binary</li>
+      
+    </ul>
+  
+  <section class="docstring">
+    <p>decode implements Base58 decoding.</p>
+
+  </section>
+  
+    <a href="https://github.com/larshesel/base58/blob/master/lib/base58.ex#L88" class="view_source">Source</a>
+  
+</section>
+<section class="detail">
+  <div class="detail_header" id="encode/1">
+    <span class="signature"><strong>encode(decoded)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#encode/1" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+    <p>Specs:</p>
+    <ul class="spec">
+      
+        <li>encode(binary) :: binary</li>
+      
+    </ul>
+  
+  <section class="docstring">
+    <p>encode implements Base58 encoding.</p>
+
+  </section>
+  
+    <a href="https://github.com/larshesel/base58/blob/master/lib/base58.ex#L44" class="view_source">Source</a>
+  
+</section>
+<section class="detail">
+  <div class="detail_header" id="padding/2">
+    <span class="signature"><strong>padding(len, byte)</strong></span>
+    <div class="detail_header_links">
+      <span class="detail_type">(function)</span>
+      <a href="#padding/2" class="detail_link" title="Link to this function">#</a>
+      <a class="to_top_link" href="#content" title="To the top of the page">&uarr;</a>
+    </div>
+  </div>
+  
+    <p>Specs:</p>
+    <ul class="spec">
+      
+        <li>padding(integer, integer) :: binary</li>
+      
+    </ul>
+  
+  <section class="docstring">
+    
+  </section>
+  
+    <a href="https://github.com/larshesel/base58/blob/master/lib/base58.ex#L66" class="view_source">Source</a>
+  
+</section>
+
+        </section>
+      
+
+      
+
+      
+    </section>
+  </body>
+</html>
